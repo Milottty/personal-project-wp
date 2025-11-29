@@ -1,0 +1,85 @@
+/*
+Theme Name: Event Website
+Author: Milot Ymeri
+Description: Get ready for an event like no other! Discover the full lineup, explore featured sessions, meet our speakers and performers, and plan your perfect experience. This is your all-access guide to the excitement—don’t miss a moment!
+Version: 1.0
+Tags: conference, seminar, keynote speakers, workshops, sessions, networking, business event, professional event
+*/
+
+/* --- NAV WRAPPER --- */
+.site-nav {
+    background: #111;
+    padding: 0;
+}
+
+.site-nav .main-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Remove default WP menu styling */
+.site-nav .main-menu li {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.site-nav .main-menu a {
+    display: block;
+    padding: 15px 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.25s ease, background 0.25s ease;
+}
+
+/* --- HOVER EFFECT --- */
+.site-nav .main-menu a:hover,
+.site-nav .main-menu .current-menu-item > a {
+    color: #ffcc00;
+}
+
+/* --- DROPDOWN STYLING --- */
+.site-nav .main-menu li ul {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: #222;
+    min-width: 180px;
+    padding: 10px 0;
+    list-style: none;
+    display: none;
+    z-index: 100;
+}
+
+.site-nav .main-menu li:hover > ul {
+    display: block;
+}
+
+.site-nav .main-menu li ul li a {
+    padding: 10px 15px;
+    white-space: nowrap;
+}
+
+.site-nav .main-menu li ul li a:hover {
+    background: #333;
+    color: #ffcc00;
+}
+
+/* --- RESPONSIVE FOR MOBILE --- */
+@media (max-width: 768px) {
+    .site-nav .main-menu {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+    }
+
+    .site-nav .main-menu a {
+        padding: 12px 15px;
+        width: 100%;
+    }
+}
