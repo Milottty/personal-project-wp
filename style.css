@@ -7,79 +7,93 @@ Tags: conference, seminar, keynote speakers, workshops, sessions, networking, bu
 */
 
 /* --- NAV WRAPPER --- */
-.site-nav {
-    background: #111;
-    padding: 0;
-}
-
-.site-nav .main-menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-
-/* Remove default WP menu styling */
-.site-nav .main-menu li {
-    margin: 0;
-    padding: 0;
+.hero {
     position: relative;
+    height: 100vh;
+    overflow: hidden;
 }
 
-.site-nav .main-menu a {
-    display: block;
-    padding: 15px 10px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.25s ease, background 0.25s ease;
-}
-
-/* --- HOVER EFFECT --- */
-.site-nav .main-menu a:hover,
-.site-nav .main-menu .current-menu-item > a {
-    color: #ffcc00;
-}
-
-/* --- DROPDOWN STYLING --- */
-.site-nav .main-menu li ul {
+.hero-banner {
     position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(6px) brightness(0.7);
+    top: 0;
     left: 0;
-    top: 100%;
-    background: #222;
-    min-width: 180px;
-    padding: 10px 0;
-    list-style: none;
-    display: none;
-    z-index: 100;
+    z-index: 1;
 }
 
-.site-nav .main-menu li:hover > ul {
-    display: block;
+/* Semi-transparent overlay */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.35);
+    z-index: 2;
 }
 
-.site-nav .main-menu li ul li a {
-    padding: 10px 15px;
-    white-space: nowrap;
+/* Centered text */
+.hero-content {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    max-width: 700px;
+    width: 90%;
 }
 
-.site-nav .main-menu li ul li a:hover {
-    background: #333;
-    color: #ffcc00;
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
 }
 
-/* --- RESPONSIVE FOR MOBILE --- */
-@media (max-width: 768px) {
-    .site-nav .main-menu {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0;
-    }
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
 
-    .site-nav .main-menu a {
-        padding: 12px 15px;
-        width: 100%;
-    }
+/* Page links */
+.hero-links a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.hero-links a:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* ---------------------- */
+/* NAVIGATION ON TOP OVERLAY */
+/* ---------------------- */
+.site-header {
+    position: absolute;  /* sits above the hero */
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 15px 40px;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(0,0,0,0.35); /* translucent */
+}
+
+.site-header a {
+    color: white;
+    text-decoration: none;
+}
+
+.main-menu li a {
+    color: white;
 }
