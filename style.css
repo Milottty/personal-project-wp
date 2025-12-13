@@ -212,3 +212,73 @@ html, body {
     background: rgba(255, 255, 255, 0.4);
 }
 
+
+
+/* About Us Section */
+.about-section {
+  background-color: #111827;
+  padding: 6rem 1.5rem;
+  color: #fff;
+}
+
+.about-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5rem;
+}
+
+@media (min-width: 1280px) {
+  .about-container {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.about-title {
+  font-size: 2.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.about-description {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: #9ca3af;
+}
+
+.team-list {
+  display: grid;
+  gap: 3rem 2rem;
+}
+
+@media (min-width: 640px) {
+  .team-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.team-member {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.team-member img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.member-name {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.member-role {
+  font-size: 0.875rem;
+  color: #818cf8;
+  font-weight: 600;
+}
